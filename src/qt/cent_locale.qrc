@@ -1,0 +1,29 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/cent_bg.qm</file>
+        <file alias="ca">locale/cent_ca.qm</file>
+        <file alias="cs">locale/cent_cs.qm</file>
+        <file alias="da">locale/cent_da.qm</file>
+        <file alias="de">locale/cent_de.qm</file>
+        <file alias="en">locale/cent_en.qm</file>
+        <file alias="en_US">locale/cent_en_US.qm</file>
+        <file alias="es">locale/cent_es.qm</file>
+        <file alias="fi">locale/cent_fi.qm</file>
+        <file alias="fr_FR">locale/cent_fr_FR.qm</file>
+        <file alias="it">locale/cent_it.qm</file>
+        <file alias="ja">locale/cent_ja.qm</file>
+        <file alias="ko_KR">locale/cent_ko_KR.qm</file>
+        <file alias="nl">locale/cent_nl.qm</file>
+        <file alias="pl">locale/cent_pl.qm</file>
+        <file alias="pt">locale/cent_pt.qm</file>
+        <file alias="pt_BR">locale/cent_pt_BR.qm</file>
+        <file alias="ro_RO">locale/cent_ro_RO.qm</file>
+        <file alias="ru">locale/cent_ru.qm</file>
+        <file alias="sk">locale/cent_sk.qm</file>
+        <file alias="sv">locale/cent_sv.qm</file>
+        <file alias="tr">locale/cent_tr.qm</file>
+        <file alias="uk">locale/cent_uk.qm</file>
+        <file alias="zh_CN">locale/cent_zh_CN.qm</file>
+        <file alias="zh_TW">locale/cent_zh_TW.qm</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,26 @@
+# /etc/conf.d/centd: config file for /etc/init.d/centd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/cent/cent.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/centd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/centd.pid"
+
+# Where to write centd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/centd"
+
+# User and group to own centd process
+#BITCOIND_USER="cent"
+#BITCOIND_GROUP="cent"
+
+# Path to centd executable
+#BITCOIND_BIN="/usr/bin/centd"
+
+# Nice value to run centd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
