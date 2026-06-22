@@ -1,8 +1,8 @@
 package=boost
-$(package)_version=1_63_0
-$(package)_download_path=https://sourceforge.net/projects/boost/files/boost/1.63.0
-$(package)_file_name=$(package)_$($(package)_version).tar.bz2
-$(package)_sha256_hash=beae2529f759f6b3bf3f4969a19c2e9d6f0c503edcb2de4a61d1428519fcb3b0
+$(package)_version=1_91_0
+$(package)_download_path=https://sourceforge.net/projects/boost/files/boost/1.91.0
+$(package)_file_name=$(package)_$($(package)_version).tar.gz
+$(package)_sha256_hash=5734305f40a76c30f951c9abd409a45a2a19fb546efe4162119250bbe4d3a463
 
 define $(package)_set_vars
 $(package)_config_opts_release=variant=release
