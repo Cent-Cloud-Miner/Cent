@@ -23,8 +23,8 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     const CBlockIndex* BlockReading = pindexLast;
     int64_t nActualTimespan = 0;
     int64_t LastBlockTime = 0;
-    int64_t PastBlocksMin = 24;
-    int64_t PastBlocksMax = 24;
+    int64_t PastBlocksMin = 30;
+    int64_t PastBlocksMax = 30;
     int64_t CountBlocks = 0;
     uint256 PastDifficultyAverage;
     uint256 PastDifficultyAveragePrev;
@@ -34,8 +34,8 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     }
 
     if (pindexLast->nHeight > Params().LAST_POW_BLOCK()) {
-        uint256 bnTargetLimit = (~uint256(0) >> 24);
-        int64_t nTargetSpacing = 60; // 60 second blocks
+        uint256 bnTargetLimit = (~uint256(0) >> 30);
+        int64_t nTargetSpacing = 3600; // 60 second blocks
         int64_t nTargetTimespan = 60 * 40;
 
         int64_t nActualSpacing = 0;

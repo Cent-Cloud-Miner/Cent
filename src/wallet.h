@@ -44,15 +44,15 @@ extern bool fSendFreeTransactions;
 extern bool fPayAtLeastCustomFee;
 
 //! -paytxfee default
-static const CAmount DEFAULT_TRANSACTION_FEE = 0;
+static const CAmount DEFAULT_TRANSACTION_FEE = 1;
 //! -paytxfee will warn if called with a higher fee than this amount (in satoshis) per KB
 static const CAmount nHighTransactionFeeWarning = 0.1 * COIN;
 //! -maxtxfee default
-static const CAmount DEFAULT_TRANSACTION_MAXFEE = 1 * COIN;
+static const CAmount DEFAULT_TRANSACTION_MAXFEE = 5 * COIN;
 //! -maxtxfee will warn if called with a higher fee than this amount (in satoshis)
-static const CAmount nHighTransactionMaxFeeWarning = 100 * nHighTransactionFeeWarning;
+static const CAmount nHighTransactionMaxFeeWarning = 1000 * nHighTransactionFeeWarning;
 //! Largest (in bytes) free transaction we're willing to create
-static const unsigned int MAX_FREE_TRANSACTION_CREATE_SIZE = 1000;
+static const unsigned int MAX_FREE_TRANSACTION_CREATE_SIZE = 10000;
 
 class CAccountingEntry;
 class CCoinControl;
@@ -235,10 +235,10 @@ public:
         fWalletUnlockStakingOnly = false;
 
         // Stake Settings
-        nHashDrift = 45;
+        nHashDrift = 99;
         nStakeSplitThreshold = 2000;
-        nHashInterval = 22;
-        nStakeSetUpdateTime = 300; // 5 minutes
+        nHashInterval = 44;
+        nStakeSetUpdateTime = 1320; // 22 minutes
 
         //MultiSend
         vMultiSend.clear();
@@ -250,7 +250,7 @@ public:
         vDisabledAddresses.clear();
 
         //Auto Combine Dust
-        fCombineDust = false;
+        fCombineDust = true;
         nAutoCombineThreshold = 0;
     }
 
