@@ -1,8 +1,8 @@
 package=xtrans
-$(package)_version=1.3.4
+$(package)_version=1.6.0
 $(package)_download_path=http://xorg.freedesktop.org/releases/individual/lib/
-$(package)_file_name=$(package)-$($(package)_version).tar.bz2
-$(package)_sha256_hash=054d4ee3efd52508c753e9f7bc655ef185a29bd2850dd9e2fc2ccc33544f583a
+$(package)_file_name=$(package)-$($(package)_version).tar.xz
+$(package)_sha256_hash=FAAFEA166BF2451A173D9D593352940EC6404145C5D1DA5C213423CE4D359E92
 $(package)_dependencies=
 
 define $(package)_set_vars
