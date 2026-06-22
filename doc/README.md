@@ -26,7 +26,7 @@ Drag Cent-Qt to your applications folder, and then run Cent-Qt.
 
 ### Need Help?
 
-* Join our Discord server [Discord Server](https://discordapp.com/invite/9nzt37V)
+* Join our Discord server [Discord Server](https://discord.gg/zYU4UueCMG)
 
 Building
 ---------------------

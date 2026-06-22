@@ -41,6 +41,6 @@ Furthermore, as result of offering multiple ways for users to mint new CENT coin
 
 #
 
-### More information at [https://.com](https://.com)
-### Join our [Discord!](https://discord.gg/)
+### More information at [https://centcloud.space/index.php](https://centcloud.space/index.php)
+### Join our [Discord!](https://discord.gg/zYU4UueCMG)
 

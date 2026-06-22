@@ -785,7 +785,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;Coming Soon /&quot;&gt; Coming Soon &lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://centcloud.space/index.php/&quot;&gt; https://centcloud.space/index.php &lt;/a&gt;</string>
                        </property>
                        <property name="textFormat">
                         <enum>Qt::RichText</enum>
@@ -817,7 +817,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://discord.gg/X7NHTyh&quot;&gt;https://discord.gg/X7NHTyh&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://discord.gg/zYU4UueCMG&quot;&gt;https://discord.gg/zYU4UueCMG&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -846,7 +846,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;https://github.com/&quot;&gt;https://github.com/cent-community/&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://github.com/Cent-Cloud-Miner/Cent&quot;&gt;https://github.com/Cent-Cloud-Miner/Cent&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -875,7 +875,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;http://155.138.211.132:3001/ &quot;&gt;http://155.138.211.132:3001/ &lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;Coming Soon &quot;&gt;Coming Soon &lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
