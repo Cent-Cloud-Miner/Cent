@@ -39,33 +39,7 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
     }
 }
 
-  if(genesis.GetHash() != uint256("0x"))
-        {
-              printf("MSearching for genesis block...\n");
-              uint256 hashTarget;
-              hashTarget.SetCompact(genesis.nBits);
-              while(uint256(genesis.GetHash()) > uint256(hashTarget))
-              {
-                  ++genesis.nNonce;
-                  if (genesis.nNonce == 0)
-                  {
-                      printf("Mainnet NONCE WRAPPED, incrementing time");
-                      std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
-                      ++genesis.nTime;
-                  }
-                  if (genesis.nNonce % 10000 == 0)
-                  {
-                      printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
-                  }
-              }
-              printf("Mainnet block.nTime = %u \n", genesis.nTime);
-              printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
-              printf("Genesis nBits: %08x\n", genesis.nBits);
-              printf("Genesis hashStateRoot = %s\n", genesis.hashStateRoot.ToString().c_str());
-              printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
-              printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
-        }
-
+ 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
     (0, uint256("0x00"));
@@ -137,11 +111,11 @@ public:
         genesis.nVersion = 1;
         genesis.nTime = 1782115677;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 21561793;
+        genesis.nNonce = 21864809;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x000001e1a5a4257154c65b46fc732bfa637ba7a898525373ba32ec4aa79921dd"));
-        assert(genesis.hashMerkleRoot == uint256("0xd611ad6808864e0e9bd331f3ffa2298c9e13a54d9fe59a99ccb3a75db374b7c9"));
+        assert(hashGenesisBlock == uint256("0x00000cde55fe2152ee873838ca51cc1b2695e71911350409b535c66888f2f220"));
+        assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
       vSeeds.emplace_back(CDNSSeedData("155.138.211.132", "155.138.211.132"));
@@ -217,10 +191,11 @@ public:
 
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1782115798;
-        genesis.nNonce = 21256609;
+        genesis.nNonce = 22616877;
 
         hashGenesisBlock = genesis.GetHash();
-       // assert(hashGenesisBlock == uint256("0x000008467c3a9c587533dea06ad9380cded3ed32f9742a6c0c1aebc21bf2bc9b"));
+       assert(hashGenesisBlock == uint256("0x0000052aa7476f4e3fd3dab971940ac4d14c9ba8989f228ebf01030f2922f884"));
+       assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
 
        vSeeds.emplace_back(CDNSSeedData("155.138.213.33", "155.138.213.33"));
         vFixedSeeds.clear();
