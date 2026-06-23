@@ -1623,11 +1623,11 @@ int64_t GetBlockValue(int nHeight)
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < Params().LAST_POW_BLOCK() && nHeight > 0)
-            return 200 * COIN;
+            return 20 * COIN;
     }
 
     if (nHeight < Params().LAST_POW_BLOCK())
-        nSubsidy =  200 * COIN;
+        nSubsidy = 1 * COIN;
     else if (nHeight <= 140159)
         nSubsidy = 1 * COIN;
     else if (nHeight > 140160 && nHeight <= 280319)

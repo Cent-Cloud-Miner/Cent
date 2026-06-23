@@ -95,7 +95,7 @@ public:
         nMaturity = 100; // 101 block maturity (+1 elsewhere)
         nMasternodeCountDrift = 15;
         nMaxMoneyOut = 50000000 * COIN; // 50 Million max supply
-        nLastPOWBlock = 500;
+        nLastPOWBlock = 100;
         nModifierUpdateBlock = 2; // we use the version 2 for CENT
 
         const char* pszTimestamp = "Cent Cloud Miner was born - KingricharDV#0439 22/06/2026";
