@@ -1619,29 +1619,35 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
-    int64_t nSubsidy = 0;
+    int64_t nSubsidy = 0; 
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < Params().LAST_POW_BLOCK() && nHeight > 0)
-            return 50000 * COIN;
+            return 200 * COIN;
     }
 
     if (nHeight < Params().LAST_POW_BLOCK())
-        nSubsidy = 10000 * COIN;
-    else if (nHeight <= 30000)
-        nSubsidy = 5 * COIN;
-    else if (nHeight > 30000 && nHeight <= 200000)
-        nSubsidy = 3.75 * COIN;
-    else if (nHeight > 200000 && nHeight <= 500000)
-        nSubsidy = 2.5 * COIN;
-    else if (nHeight > 500000 && nHeight <= 900000)
-        nSubsidy = 1.25 * COIN;
-    else if (nHeight > 900000 && nHeight <= 1500000)
-        nSubsidy = 0.5 * COIN;
-    else if (nHeight > 1500000 && nHeight <= 6000000)
-        nSubsidy = 0.25 * COIN;
+        nSubsidy =  200 * COIN;
+    else if (nHeight <= 140159)
+        nSubsidy = 1 * COIN;
+    else if (nHeight > 140160 && nHeight <= 280319)
+        nSubsidy = 0.500 * COIN;
+    else if (nHeight > 280320 && nHeight <= 420479)
+        nSubsidy = 0.250 * COIN;
+    else if (nHeight > 420480 && nHeight <= 560639)
+        nSubsidy = 0.1250 * COIN;
+    else if (nHeight > 560640 && nHeight <= 700799)
+        nSubsidy = 0.06250 * COIN;
+    else if (nHeight > 700800 && nHeight <= 840959)
+        nSubsidy = 0.03125 * COIN;
+    else if (nHeight > 840960 && nHeight <= 981119)
+        nSubsidy = 0.015625 * COIN;
+    else if (nHeight > 981120 && nHeight <= 1121279)
+        nSubsidy = 0.0078125 * COIN;
+    else if (nHeight > 1121280 && nHeight <= 50000000)
+        nSubsidy = 0.00390625 * COIN;
     else
-        nSubsidy = 0.125 * COIN;
+        nSubsidy = 0.001953125 * COIN;
 
     // Check if we reached the coin max supply.
     int64_t nMoneySupply = chainActive.Tip()->nMoneySupply;
@@ -1664,7 +1670,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         return 0;
 
     // Check if we reached coin supply
-    ret = blockValue * 0.85; // 85% of block reward
+    ret = blockValue * 0.75; // 75% of block reward
 
     return ret;
 }

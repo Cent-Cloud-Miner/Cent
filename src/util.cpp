@@ -113,23 +113,23 @@ string strMasterNodeAddr = "";
 bool fLiteMode = false;
 // SwiftTX
 bool fEnableSwiftTX = true;
-int nSwiftTXDepth = 5;
+int nSwiftTXDepth = 9;
 /** Spork enforcement enabled time */
-int64_t enforceMasternodePaymentsTime = 4085657524;
+int64_t enforceMasternodePaymentsTime = 1782115690;
 bool fSucessfullyLoaded = false;
 string strBudgetMode = "";
 
 map<string, string> mapArgs;
 map<string, vector<string> > mapMultiArgs;
-bool fDebug = false;
+bool fDebug = true;
 bool fPrintToConsole = false;
-bool fPrintToDebugLog = false;
-bool fDaemon = false;
-bool fServer = false;
+bool fPrintToDebugLog = true;
+bool fDaemon = true;
+bool fServer = true;
 string strMiscWarning;
-bool fLogTimestamps = false;
-bool fLogIPs = false;
-volatile bool fReopenDebugLog = false;
+bool fLogTimestamps = true;
+bool fLogIPs = true;
+volatile bool fReopenDebugLog = true;
 
 /** Init OpenSSL library multithreading support */
 static CCriticalSection** ppmutexOpenSSL;

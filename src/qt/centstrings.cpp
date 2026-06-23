@@ -203,10 +203,10 @@ QT_TRANSLATE_NOOP("cent-core", ""
 QT_TRANSLATE_NOOP("cent-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("cent-core", "(6942 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("cent-core", "(9822 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("cent-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("cent-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("cent-core", "(must be 6942 for mainnet)"),
+QT_TRANSLATE_NOOP("cent-core", "(must be 9822 for mainnet)"),
 QT_TRANSLATE_NOOP("cent-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("cent-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("cent-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

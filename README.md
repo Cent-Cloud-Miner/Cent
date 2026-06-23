@@ -19,7 +19,7 @@ Furthermore, as result of offering multiple ways for users to mint new CENT coin
 #### Masternode collateral - *200 CENT*  
 #### Features: - *SwiftTX, budget, treausury and masternode governance is enabled* 
 #### RPC Port: - *9922* 
-#### P2P Port: - *6942* 
+#### P2P Port: - *9822* 
 
 #
 

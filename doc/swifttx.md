@@ -30,7 +30,7 @@ Details pertaining to an observed "Transaction Lock" can also be retrieved throu
 By default, the Cent Core daemon will launch using the following constant:
 
 ```
-static const int DEFAULT_SWIFTTX_DEPTH = 5;
+static const int DEFAULT_SWIFTTX_DEPTH = 9;
 ```
 
 This value can be overridden by passing the following argument to the Cent Core daemon:

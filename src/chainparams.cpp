@@ -82,19 +82,19 @@ public:
         pchMessageStart[2] = 0xB3;
         pchMessageStart[3] = 0xD8;
         vAlertPubKey = ParseHex("045ad6f1551c2367f81c0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
-        nDefaultPort = 6942;
+        nDefaultPort = 9822;
         bnProofOfWorkLimit = ~uint256(0) >> 1;
-        nSubsidyHalvingInterval = 1050000;
+        nSubsidyHalvingInterval = 140160;
         nMaxReorganizationDepth = 100;
-        nEnforceBlockUpgradeMajority = 1500;
-        nRejectBlockOutdatedMajority = 1900;
+        nEnforceBlockUpgradeMajority = 555;
+        nRejectBlockOutdatedMajority = 1100;
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 2;
-        nTargetTimespan = 4 * 60 * 60;
-        nTargetSpacing = 5 * 60;  // Cent: 5 minute blocks during POW (block 1-200)
-        nMaturity = 30; // 31 block maturity (+1 elsewhere)
-        nMasternodeCountDrift = 20;
-        nMaxMoneyOut = 10000000000 * COIN; // 100 billion max supply same as Doge
+        nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
+        nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-200)
+        nMaturity = 100; // 101 block maturity (+1 elsewhere)
+        nMasternodeCountDrift = 15;
+        nMaxMoneyOut = 50000000 * COIN; // 50 Million max supply
         nLastPOWBlock = 500;
         nModifierUpdateBlock = 2; // we use the version 2 for CENT
 
@@ -151,7 +151,7 @@ public:
         strMasternodePoolDummyAddress = "NSJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
         nStartMasternodePayments = 4070908800;
 
-        nBudget_Fee_Confirmations = 6; // Number of confirmations for the finalization fee
+        nBudget_Fee_Confirmations = 9; // Number of confirmations for the finalization fee
     }
 
     const Checkpoints::CCheckpointData& Checkpoints() const
@@ -176,19 +176,20 @@ public:
         pchMessageStart[2] = 0xB4;
         pchMessageStart[3] = 0xDC;
         vAlertPubKey = ParseHex("041b2b4c86273359acac3522471911ed2b303eaab65e8a1de01c06e89f2eab1e55234a4b504f3ce20c6f661f007d0ca15623b4358d9855c7c8ba793a24fa315e22");
-        nDefaultPort = 16942;
-        nEnforceBlockUpgradeMajority = 51;
-        nRejectBlockOutdatedMajority = 75;
-        nToCheckBlockUpgradeMajority = 100;
-        nMinerThreads = 0;
-        nTargetTimespan = 1 * 60; // Cent: 1 day
-        nTargetSpacing = 2 * 60;  // Cent: 1 minute
-        nLastPOWBlock = 200;
-        nMaturity = 15;
-        nMasternodeCountDrift = 4;
-        nModifierUpdateBlock = 1;
-        nMaxMoneyOut = 10000000000 * COIN;
+        nDefaultPort = 9432;
+        nEnforceBlockUpgradeMajority = 555;
+        nRejectBlockOutdatedMajority = 1100;
+        nToCheckBlockUpgradeMajority = 1000;
+        nMinerThreads = 2;
+        nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
+        nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-200)
+        nMaturity = 100; // 101 block maturity (+1 elsewhere)
+        nLastPOWBlock = 50000000;
+        nMasternodeCountDrift = 15;
+        nModifierUpdateBlock = 2;
+        nMaxMoneyOut = 50000000 * COIN;
 
+        const char* pszTimestamp = "Cent Cloud Miner was born - KingricharDV#0439 22/06/2026";
         //! Modify the testnet genesis block so the timestamp is valid for a later start.
         genesis.nTime = 1782115798;
         genesis.nNonce = 22616877;
@@ -216,11 +217,11 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = false;
         fRequireStandard = false;
-        fMineBlocksOnDemand = false;
+        fMineBlocksOnDemand = true;
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;

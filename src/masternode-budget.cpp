@@ -838,7 +838,7 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
     if (chainActive.Tip() == NULL) return 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        CAmount nSubsidy = 500 * COIN;
+        CAmount nSubsidy = 500 * COIN; 
         return ((nSubsidy / 100) * 10) * 146;
     }
 
