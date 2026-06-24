@@ -89,7 +89,7 @@ public:
         nEnforceBlockUpgradeMajority = 555;
         nRejectBlockOutdatedMajority = 1100;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 2;
+        nMinerThreads = 0;
         nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
         nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-200)
         nMaturity = 100; // 101 block maturity (+1 elsewhere)
@@ -180,7 +180,7 @@ public:
         nEnforceBlockUpgradeMajority = 555;
         nRejectBlockOutdatedMajority = 1100;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 2;
+        nMinerThreads = 0;
         nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
         nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-200)
         nMaturity = 100; // 101 block maturity (+1 elsewhere)
