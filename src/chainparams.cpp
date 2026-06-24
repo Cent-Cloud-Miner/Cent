@@ -54,19 +54,19 @@ static const Checkpoints::CCheckpointData data = {
 };
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
-    boost::assign::map_list_of(0, uint256("0x00"));
+    boost::assign::map_list_of(0, uint256("0x001"));
 
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1782115798,
+    1740710,
     0,
     250};
 
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
-    boost::assign::map_list_of(0, uint256("0x00"));
+    boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1782115821,
+    1454124731,
     0,
     100};
 
@@ -89,7 +89,7 @@ public:
         nEnforceBlockUpgradeMajority = 555;
         nRejectBlockOutdatedMajority = 1100;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 0;
+        nMinerThreads = 2;
         nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
         nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-200)
         nMaturity = 100; // 101 block maturity (+1 elsewhere)
@@ -108,7 +108,7 @@ public:
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
-        genesis.nVersion = 2;
+        genesis.nVersion = 1;
         genesis.nTime = 1782115677;
         genesis.nBits = 0x1e0ffff0;
         genesis.nNonce = 21864809;
@@ -149,7 +149,7 @@ public:
         nPoolMaxTransactions = 10;
         strSporkKey = "04cc17389379a0e323f53ea504d38cd71f43dc22f597805fed33a51b05ced1a3ae0db84089985f351b3737721736a82f58c8bd529f79c8ffe57e922bda792146ab";
         strMasternodePoolDummyAddress = "NSJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
-        nStartMasternodePayments = 1782115677;
+        nStartMasternodePayments = 4070908800;
 
         nBudget_Fee_Confirmations = 9; // Number of confirmations for the finalization fee
     }
@@ -180,7 +180,7 @@ public:
         nEnforceBlockUpgradeMajority = 555;
         nRejectBlockOutdatedMajority = 1100;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 0;
+        nMinerThreads = 2;
         nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
         nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-200)
         nMaturity = 100; // 101 block maturity (+1 elsewhere)
@@ -262,6 +262,7 @@ public:
         nTargetSpacing = 2 * 60;        // Cent: 1 minutes
         bnProofOfWorkLimit = ~uint256(0) >> 1;
         genesis.nTime = 1782115821;
+        genesis.nBits = 0x207fffff;
         genesis.nNonce = 20542300;
 
         hashGenesisBlock = genesis.GetHash();
