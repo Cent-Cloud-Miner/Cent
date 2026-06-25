@@ -118,7 +118,8 @@ public:
         assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-      vSeeds.emplace_back(CDNSSeedData("155.138.211.132", "155.138.211.132"));
+      vSeeds.emplace_back(CDNSSeedData("163.245.218.219", "163.245.218.219"));
+      vSeeds.emplace_back(CDNSSeedData("182.206.23.95", "182.206.23.95"));
       
 
         // Cent addresses start with 'C'
@@ -198,7 +199,7 @@ public:
        assert(hashGenesisBlock == uint256("0x0000052aa7476f4e3fd3dab971940ac4d14c9ba8989f228ebf01030f2922f884"));
        assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
 
-       vSeeds.emplace_back(CDNSSeedData("155.138.213.33", "155.138.213.33"));
+       vSeeds.emplace_back(CDNSSeedData("182.206.23.95", "182.206.23.95"));
         vFixedSeeds.clear();
         vSeeds.clear();
 
