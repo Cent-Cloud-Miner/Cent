@@ -120,17 +120,13 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 
     // Check range
-    printf("nBits=%08x\n", nBits);
-printf("fNegative=%d\n", fNegative);
-printf("bnTarget=%s\n", bnTarget.GetHex().c_str());
-printf("fOverflow=%d\n", fOverflow);
-printf("powLimit=%s\n", Params().ProofOfWorkLimit().GetHex().c_str());
+LogPrint("pow", "nBits=%08x\n", nBits);
     if (fNegative || bnTarget == 0 || fOverflow || bnTarget > Params().ProofOfWorkLimit())
         return error("CheckProofOfWork() : nBits below minimum work");
 
     // Check proof of work matches claimed amount
-    //if (hash > bnTarget)
-      // return error("CheckProofOfWork() : hash doesn't match nBits");
+    if (hash > bnTarget)
+       return error("CheckProofOfWork() : hash doesn't match nBits");
 if (fNegative)
     return error("CheckProofOfWork(): negative target");
 

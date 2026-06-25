@@ -149,7 +149,7 @@ public:
         nPoolMaxTransactions = 10;
         strSporkKey = "04cc17389379a0e323f53ea504d38cd71f43dc22f597805fed33a51b05ced1a3ae0db84089985f351b3737721736a82f58c8bd529f79c8ffe57e922bda792146ab";
         strMasternodePoolDummyAddress = "NSJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
-        nStartMasternodePayments = 4070908800;
+        nStartMasternodePayments = 1782115677;
 
         nBudget_Fee_Confirmations = 9; // Number of confirmations for the finalization fee
     }
