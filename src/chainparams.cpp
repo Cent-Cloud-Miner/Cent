@@ -83,7 +83,7 @@ public:
         pchMessageStart[3] = 0xD8;
         vAlertPubKey = ParseHex("045ad6f1551c2367f81c0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
         nDefaultPort = 9822;
-        bnProofOfWorkLimit = ~uint256(0) >> 1;
+        bnProofOfWorkLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         nSubsidyHalvingInterval = 140160;
         nMaxReorganizationDepth = 100;
         nEnforceBlockUpgradeMajority = 555;
@@ -91,7 +91,7 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
-        nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-200)
+        nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-100)
         nMaturity = 100; // 101 block maturity (+1 elsewhere)
         nMasternodeCountDrift = 15;
         nMaxMoneyOut = 50000000 * COIN; // 50 Million max supply

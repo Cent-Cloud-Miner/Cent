@@ -13,7 +13,7 @@
 #include "uint256.h"
 #include "util.h"
 
-#include <math.h>
+#include <math.h> 
 
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader* pblock)
@@ -34,9 +34,9 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     }
 
     if (pindexLast->nHeight > Params().LAST_POW_BLOCK()) {
-        uint256 bnTargetLimit = (~uint256(0) >> 30);
-        int64_t nTargetSpacing = 15 * 60; // 60 second blocks
-        int64_t nTargetTimespan = 4 * 60 * 60;
+        uint256 bnTargetLimit = Params().ProofOfWorkLimit();
+        int64_t nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-100)
+        int64_t nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
 
         int64_t nActualSpacing = 0;
         if (pindexLast->nHeight != 0)
@@ -129,9 +129,19 @@ printf("powLimit=%s\n", Params().ProofOfWorkLimit().GetHex().c_str());
         return error("CheckProofOfWork() : nBits below minimum work");
 
     // Check proof of work matches claimed amount
-    if (hash > bnTarget)
-       return error("CheckProofOfWork() : hash doesn't match nBits");
+    //if (hash > bnTarget)
+      // return error("CheckProofOfWork() : hash doesn't match nBits");
+if (fNegative)
+    return error("CheckProofOfWork(): negative target");
 
+if (bnTarget == 0)
+    return error("CheckProofOfWork(): zero target");
+
+if (fOverflow)
+    return error("CheckProofOfWork(): overflow");
+
+if (bnTarget > Params().ProofOfWorkLimit())
+    return error("CheckProofOfWork(): target exceeds pow limit");
     return true;
 }
 
