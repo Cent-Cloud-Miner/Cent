@@ -89,13 +89,13 @@ public:
         nEnforceBlockUpgradeMajority = 555;
         nRejectBlockOutdatedMajority = 1100;
         nToCheckBlockUpgradeMajority = 1000;
-        nMinerThreads = 0;
+        nMinerThreads = 1;
         nTargetTimespan = 24 * 60 * 60;// 86,400 / 900 
         nTargetSpacing = 15 * 60;  // Cent: 15 minute blocks during POW (block 1-100)
-        nMaturity = 100; // 101 block maturity (+1 elsewhere)
+        nMaturity = 50; // 51 block maturity (+1 elsewhere)
         nMasternodeCountDrift = 15;
         nMaxMoneyOut = 50000000 * COIN; // 50 Million max supply
-        nLastPOWBlock = 100;
+        nLastPOWBlock = 50;
         nModifierUpdateBlock = 2; // we use the version 2 for CENT
 
         const char* pszTimestamp = "Cent Cloud Miner was born - KingricharDV#0439 22/06/2026";
