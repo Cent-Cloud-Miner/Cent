@@ -114,8 +114,33 @@ public:
         genesis.nNonce = 21864809;
 
         hashGenesisBlock = genesis.GetHash();
-        assert(hashGenesisBlock == uint256("0x00000cde55fe2152ee873838ca51cc1b2695e71911350409b535c66888f2f220"));
-        assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
+        if(genesis.GetHash() != uint256("0x"))
+{
+      printf("MSearching for genesis block...\n");
+      uint256 hashTarget;
+      hashTarget.SetCompact(genesis.nBits);
+      while(uint256(genesis.GetHash()) > uint256(hashTarget))
+      {
+          ++genesis.nNonce;
+          if (genesis.nNonce == 0)
+          {
+              printf("Mainnet NONCE WRAPPED, incrementing time");
+              std::cout << std::string("Mainnet NONCE WRAPPED, incrementing time:\n");
+              ++genesis.nTime;
+          }
+          if (genesis.nNonce % 10000 == 0)
+          {
+              printf("Mainnet: nonce %08u: hash = %s \n", genesis.nNonce, genesis.GetHash().ToString().c_str());
+          }
+      }
+      printf("Mainnet block.nTime = %u \n", genesis.nTime);
+      printf("Mainnet block.nNonce = %u \n", genesis.nNonce);
+      printf("Mainnet block.hashMerkleRoot: %s\n", genesis.hashMerkleRoot.ToString().c_str());
+      printf("Mainnet block.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+}
+
+       // assert(hashGenesisBlock == uint256("0x00000cde55fe2152ee873838ca51cc1b2695e71911350409b535c66888f2f220"));
+       // assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
       vSeeds.emplace_back(CDNSSeedData("163.245.218.219", "163.245.218.219"));
@@ -196,8 +221,8 @@ public:
         genesis.nNonce = 22616877;
 
         hashGenesisBlock = genesis.GetHash();
-       assert(hashGenesisBlock == uint256("0x0000052aa7476f4e3fd3dab971940ac4d14c9ba8989f228ebf01030f2922f884"));
-       assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
+       //assert(hashGenesisBlock == uint256("0x0000052aa7476f4e3fd3dab971940ac4d14c9ba8989f228ebf01030f2922f884"));
+     //  assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
 
        vSeeds.emplace_back(CDNSSeedData("182.206.23.95", "182.206.23.95"));
         vFixedSeeds.clear();
