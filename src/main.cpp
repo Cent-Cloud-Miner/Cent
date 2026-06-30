@@ -73,14 +73,14 @@ CWaitableCriticalSection csBestBlock;
 CConditionVariable cvBlockChange;
 int nScriptCheckThreads = 0;
 bool fImporting = false;
-bool fReindex = false;
+bool fReindex = true;
 bool fTxIndex = true;
 bool fIsBareMultisigStd = true;
-bool fCheckBlockIndex = false;
+bool fCheckBlockIndex = true;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 60 * 60 * 60;
+unsigned int nStakeMinAge = 24 * 60 * 60;
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in ucent) are considered zero fee (for relaying and mining)
@@ -3084,6 +3084,12 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
 {
     // Check proof of work matches claimed amount
     if (fCheckPOW && !CheckProofOfWork(block.GetHash(), block.nBits))
+    LogPrintf("=====================================\n");
+LogPrintf("Header Hash   : %s\n", block.GetHash().GetHex());
+LogPrintf("Header nBits  : %08x\n", block.nBits);
+LogPrintf("Header Time   : %u\n", block.nTime);
+LogPrintf("Header Nonce  : %u\n", block.nNonce);
+LogPrintf("Prev Hash     : %s\n", block.hashPrevBlock.GetHex());
         return state.DoS(50, error("CheckBlockHeader() : proof of work failed"),
             REJECT_INVALID, "high-hash");
 
