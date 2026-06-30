@@ -142,7 +142,7 @@ public:
 
         fMiningRequiresPeers = true;
         fAllowMinDifficultyBlocks = false;
-        fDefaultConsistencyChecks = false;
+        fDefaultConsistencyChecks = true;
         fRequireStandard = true;
         fMineBlocksOnDemand = true;
         fSkipProofOfWorkCheck = false;

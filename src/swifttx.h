@@ -23,8 +23,8 @@
     ### getting 5 of 10 signatures w/ 1000 nodes of 2900
     (1000/2900.0)**5 = 0.004875397277841433
 */
-#define SWIFTTX_SIGNATURES_REQUIRED 6
-#define SWIFTTX_SIGNATURES_TOTAL 10
+#define SWIFTTX_SIGNATURES_REQUIRED 6 
+#define SWIFTTX_SIGNATURES_TOTAL 15
 
 using namespace std;
 using namespace boost;

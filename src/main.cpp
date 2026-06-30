@@ -1633,19 +1633,19 @@ int64_t GetBlockValue(int nHeight)
         nSubsidy = 1 * COIN;
     else if (nHeight >= 140160 && nHeight <= 280319)
         nSubsidy = COIN / 2;
-    else if (nHeight > 280320 && nHeight <= 420479)
+    else if (nHeight >= 280320 && nHeight <= 420479)
         nSubsidy = COIN / 4;
-    else if (nHeight > 420480 && nHeight <= 560639)
+    else if (nHeight >= 420480 && nHeight <= 560639)
         nSubsidy = COIN / 8;
-    else if (nHeight > 560640 && nHeight <= 700799)
+    else if (nHeight >= 560640 && nHeight <= 700799)
         nSubsidy = 0.06250 * COIN;
-    else if (nHeight > 700800 && nHeight <= 840959)
+    else if (nHeight >= 700800 && nHeight <= 840959)
         nSubsidy = 0.03125 * COIN;
-    else if (nHeight > 840960 && nHeight <= 981119)
+    else if (nHeight >= 840960 && nHeight <= 981119)
         nSubsidy = 0.015625 * COIN;
-    else if (nHeight > 981120 && nHeight <= 1121279)
+    else if (nHeight >= 981120 && nHeight <= 1121279)
         nSubsidy = COIN / 128;
-    else if (nHeight > 1121280 && nHeight <= 50000000)
+    else if (nHeight >= 1121280 && nHeight <= 50000000)
         nSubsidy = 0.00390625 * COIN;
     else
         nSubsidy = 0.001953125 * COIN;
@@ -3083,12 +3083,6 @@ bool CheckBlockHeader(const CBlockHeader& block, CValidationState& state, bool f
 {
     // Check proof of work matches claimed amount
     if (fCheckPOW && !CheckProofOfWork(block.GetHash(), block.nBits))
-    LogPrintf("=====================================\n");
-LogPrintf("Header Hash   : %s\n", block.GetHash().GetHex());
-LogPrintf("Header nBits  : %08x\n", block.nBits);
-LogPrintf("Header Time   : %u\n", block.nTime);
-LogPrintf("Header Nonce  : %u\n", block.nNonce);
-LogPrintf("Prev Hash     : %s\n", block.hashPrevBlock.GetHex());
         return state.DoS(50, error("CheckBlockHeader() : proof of work failed"),
             REJECT_INVALID, "high-hash");
 
