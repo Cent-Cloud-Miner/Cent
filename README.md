@@ -25,7 +25,9 @@ Furthermore, as result of offering multiple ways for users to mint new CENT coin
 
 ### Block reward breakdown (Block height - Reward per block)
 #
-#### Block 201-140,159	          -     *1.000 CENT*
+#### There is 40 blocks about that will be POW then the system will switch to #### POS and Masternode. These 40 blocks or so have a pay out of 1 cent each.
+#
+#### Block 1-140,159	          -     *1.000 CENT*
 
 #### Block 140,160-280,319        -     *0.500 CENT*
 
