@@ -73,10 +73,10 @@ CWaitableCriticalSection csBestBlock;
 CConditionVariable cvBlockChange;
 int nScriptCheckThreads = 0;
 bool fImporting = false;
-bool fReindex = false;
+bool fReindex = true;
 bool fTxIndex = true;
 bool fIsBareMultisigStd = true;
-bool fCheckBlockIndex = false;
+bool fCheckBlockIndex = true;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
