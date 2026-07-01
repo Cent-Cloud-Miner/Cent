@@ -235,6 +235,8 @@ QT_TRANSLATE_NOOP("cent-core", "Copyright (C) 2009-%i The Bitcoin Core Developer
 QT_TRANSLATE_NOOP("cent-core", "Copyright (C) 2014-%i The Dash Core Developers"),
 QT_TRANSLATE_NOOP("cent-core", "Copyright (C) 2015-%i The PIVX Core Developers"),
 QT_TRANSLATE_NOOP("cent-core", "Copyright (C) 2017-%i The Cent Core Developers"),
+QT_TRANSLATE_NOOP("cent-core", "Cent Dev address: CVW3GfX1ertGAfcaPvUQdDgKC7PZYX7c5U"),
+QT_TRANSLATE_NOOP("cent-core", "LTC Dev address: ltc1q0u3z5u5z9425sksl2vtsh4krvn3f2ejst9x6rj"),
 QT_TRANSLATE_NOOP("cent-core", "Corrupted block database detected"),
 QT_TRANSLATE_NOOP("cent-core", "Could not parse -rpcbind value %s as network address"),
 QT_TRANSLATE_NOOP("cent-core", "Could not parse masternode.conf"),
