@@ -73,14 +73,14 @@ CWaitableCriticalSection csBestBlock;
 CConditionVariable cvBlockChange;
 int nScriptCheckThreads = 0;
 bool fImporting = false;
-bool fReindex = true;
+bool fReindex = false;
 bool fTxIndex = true;
 bool fIsBareMultisigStd = true;
-bool fCheckBlockIndex = true;
+bool fCheckBlockIndex = false;
 unsigned int nCoinCacheSize = 5000;
 bool fAlerts = DEFAULT_ALERTS;
 
-unsigned int nStakeMinAge = 24 * 60 * 60;
+unsigned int nStakeMinAge = 60 * 60 * 60;
 int64_t nReserveBalance = 0;
 
 /** Fees smaller than this (in ucent) are considered zero fee (for relaying and mining)
@@ -1627,25 +1627,26 @@ int64_t GetBlockValue(int nHeight)
     }
 
     if (nHeight < Params().LAST_POW_BLOCK())
-        if (nHeight == 0)
-    nSubsidy = 200000 * COIN;
-    else if (nHeight >= 1 && nHeight <= 140159)
+        nSubsidy = 200000 * COIN;
+    else if (nHeight <= 1)
+        nSubsidy = 200000* COIN;
+    else if (nHeight >= 2 && nHeight <= 140159)
         nSubsidy = 1 * COIN;
     else if (nHeight >= 140160 && nHeight <= 280319)
         nSubsidy = COIN / 2;
-    else if (nHeight >= 280320 && nHeight <= 420479)
+    else if (nHeight > 280320 && nHeight <= 420479)
         nSubsidy = COIN / 4;
-    else if (nHeight >= 420480 && nHeight <= 560639)
+    else if (nHeight > 420480 && nHeight <= 560639)
         nSubsidy = COIN / 8;
-    else if (nHeight >= 560640 && nHeight <= 700799)
+    else if (nHeight > 560640 && nHeight <= 700799)
         nSubsidy = 0.06250 * COIN;
-    else if (nHeight >= 700800 && nHeight <= 840959)
+    else if (nHeight > 700800 && nHeight <= 840959)
         nSubsidy = 0.03125 * COIN;
-    else if (nHeight >= 840960 && nHeight <= 981119)
+    else if (nHeight > 840960 && nHeight <= 981119)
         nSubsidy = 0.015625 * COIN;
-    else if (nHeight >= 981120 && nHeight <= 1121279)
+    else if (nHeight > 981120 && nHeight <= 1121279)
         nSubsidy = COIN / 128;
-    else if (nHeight >= 1121280 && nHeight <= 50000000)
+    else if (nHeight > 1121280 && nHeight <= 50000000)
         nSubsidy = 0.00390625 * COIN;
     else
         nSubsidy = 0.001953125 * COIN;
