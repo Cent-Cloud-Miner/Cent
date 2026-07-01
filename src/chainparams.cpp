@@ -81,7 +81,7 @@ public:
         pchMessageStart[1] = 0xBA;
         pchMessageStart[2] = 0xB3;
         pchMessageStart[3] = 0xD8;
-        vAlertPubKey = ParseHex("045ad6f1551c2367f81c0ecb4d45d088298442887645a314dfcba3039401872473b0200e69d9679a0d7cc307fb9aaaacafb0cebc18050ce7c995fa19c6accc8415");
+        vAlertPubKey = ParseHex("044ec53afcb84bd27b831bca30a16ef836f2bc471e782425e0ee9e4ef9bdba9923db191a905711feabde0b71f160be719dffff7f478515aa2dc1f0f86b4327e09b");
         nDefaultPort = 9822;
         bnProofOfWorkLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         nSubsidyHalvingInterval = 140160;
@@ -114,7 +114,7 @@ public:
         genesis.nNonce = 21864809;
 
         hashGenesisBlock = genesis.GetHash();
-  
+    
 
         assert(hashGenesisBlock == uint256("0x00000cde55fe2152ee873838ca51cc1b2695e71911350409b535c66888f2f220"));
         assert(genesis.hashMerkleRoot == uint256("0x495d8a5c31c95663388f771999804dac6419be637faadc44d39080f7c8f4ce90"));
@@ -145,13 +145,13 @@ public:
         fDefaultConsistencyChecks = true;
         fRequireStandard = true;
         fMineBlocksOnDemand = true;
-        fSkipProofOfWorkCheck = false;
+        fSkipProofOfWorkCheck = true;
         fTestnetToBeDeprecatedFieldRPC = false;
         fHeadersFirstSyncingActive = true;
 
         nPoolMaxTransactions = 10;
-        strSporkKey = "04cc17389379a0e323f53ea504d38cd71f43dc22f597805fed33a51b05ced1a3ae0db84089985f351b3737721736a82f58c8bd529f79c8ffe57e922bda792146ab";
-        strMasternodePoolDummyAddress = "NSJVWUkt6HtSCY2SaJ2akeyJUg8bg1hW3S";
+        strSporkKey = "045f3ca10d4a639c5af5d5db1e84b86a02d0b9a791e8237af326936527b8e254cbf1d9661d7983cd71dec0d2bb044c3bc41d8996d895e556dfac649f2c62cadeca";
+        strMasternodePoolDummyAddress = "CVW3GfX1ertGAfcaPvUQdDgKC7PZYX7c5U";
         nStartMasternodePayments = 1782115677;
 
         nBudget_Fee_Confirmations = 9; // Number of confirmations for the finalization fee
@@ -178,7 +178,7 @@ public:
         pchMessageStart[1] = 0xBB;
         pchMessageStart[2] = 0xB4;
         pchMessageStart[3] = 0xDC;
-        vAlertPubKey = ParseHex("041b2b4c86273359acac3522471911ed2b303eaab65e8a1de01c06e89f2eab1e55234a4b504f3ce20c6f661f007d0ca15623b4358d9855c7c8ba793a24fa315e22");
+        vAlertPubKey = ParseHex("045f3ca10d4a639c5af5d5db1e84b86a02d0b9a791e8237af326936527b8e254cbf1d9661d7983cd71dec0d2bb044c3bc41d8996d895e556dfac649f2c62cadeca");
         nDefaultPort = 9432;
         nEnforceBlockUpgradeMajority = 555;
         nRejectBlockOutdatedMajority = 1100;
@@ -228,7 +228,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04abb5e65280dda6a113fadfb9877f9c399532245fe1acb61de293ab298034d5084277fab3768774a3b68cbbe5021cc5049ec8c9997a13f64da1afa0bcfb156db1";
+        strSporkKey = "045f3ca10d4a639c5af5d5db1e84b86a02d0b9a791e8237af326936527b8e254cbf1d9661d7983cd71dec0d2bb044c3bc41d8996d895e556dfac649f2c62cadeca";
         strMasternodePoolDummyAddress = "gbJ4Qad4xc77PpLzMx6rUegAs6aUPWkcUq";
         nStartMasternodePayments = genesis.nTime + 86400; // 24 hours after genesis
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
