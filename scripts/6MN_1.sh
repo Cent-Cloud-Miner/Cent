@@ -85,6 +85,8 @@ echo "listen=0" >> /home/cent1/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent1/.cent/cent.conf
 echo "masternodeprivkey=$privkey" >> /home/cent1/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent1/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent1/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent1/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent1/.cent/cent.conf
 sleep 5
 echo -e "${GREEN}Configuring Wallet for second node${NC}"
@@ -102,6 +104,8 @@ echo "listen=0" >> /home/cent2/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent2/.cent/cent.conf
 echo "masternodeprivkey=$privkey2" >> /home/cent2/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent2/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent2/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent2/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent2/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for third node${NC}"
@@ -119,6 +123,8 @@ echo "listen=0" >> /home/cent3/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent3/.cent/cent.conf
 echo "masternodeprivkey=$privkey3" >> /home/cent3/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent3/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent3/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent3/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent3/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for 4th node${NC}"
@@ -136,6 +142,8 @@ echo "listen=0" >> /home/cent4/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent4/.cent/cent.conf
 echo "masternodeprivkey=$privkey4" >> /home/cent4/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent4/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent4/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent4/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent4/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for 5th node${NC}"
@@ -153,6 +161,8 @@ echo "listen=1" >> /home/cent5/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent5/.cent/cent.conf
 echo "masternodeprivkey=$privkey5" >> /home/cent5/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent5/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent5/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent5/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent5/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for 6th node${NC}"
@@ -170,6 +180,8 @@ echo "listen=1" >> /home/cent6/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent6/.cent/cent.conf
 echo "masternodeprivkey=$privkey6" >> /home/cent6/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent6/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent6/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent6/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent6/.cent/cent.conf
 
 sleep 5 
