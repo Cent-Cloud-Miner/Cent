@@ -210,7 +210,7 @@ sleep 10
 until cent-cli -datadir=/home/cent6/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Last node is fully synced. You 6th masternode is running!"${NC}
 echo ""
-echo -e ${GREEN}"Congrats! Your NORT Masternodes are now installed and started. Please wait from 10-20 minutes in order to give the masternode enough time to sync, then start the node from your wallet, Debug console option"${NC}
+echo -e ${GREEN}"Congrats! Your Cent Masternodes are now installed and started. Please wait from 10-20 minutes in order to give the masternode enough time to sync, then start the node from your wallet, Debug console option"${NC}
 echo "Cents address: CVW3GfX1ertGAfcaPvUQdDgKC7PZYX7c5U"
 echo "LTC address: ltc1q0u3z5u5z9425sksl2vtsh4krvn3f2ejst9x6rj"
 echo "The END. You can close now the SSH terminal session";
