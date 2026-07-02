@@ -21,7 +21,7 @@ echo -e ${GREEN}"Please Enter Your Masternodes Private Key for second node:"${NC
 read privkey2
 
 echo "Creating 6 Cent system users with no-login access:"
-sudo adduser --system --home /home/cent cent1
+sudo adduser --system --home /home/cent1 cent1
 sudo adduser --system --home /home/cent2 cent2
 
 sudo apt-get -y update 
@@ -70,6 +70,8 @@ echo "listen=0" >> /home/cent1/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent1/.cent/cent.conf
 echo "masternodeprivkey=$privkey" >> /home/cent1/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent1/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent1/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent1/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent1/.cent/cent.conf
 sleep 5
 echo -e "${GREEN}Configuring Wallet for second node${NC}"
@@ -87,6 +89,8 @@ echo "listen=0" >> /home/cent2/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent2/.cent/cent.conf
 echo "masternodeprivkey=$privkey2" >> /home/cent2/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent2/.cent/cent.conf
+echo "addnode=153.75.231.58" >> /home/cent2/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent2/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent2/.cent/cent.conf
 sleep 5 
 fi
