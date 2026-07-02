@@ -67,7 +67,7 @@ cd ~
 sudo mkdir /root/cent
 cd /root/cent
 wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
-tar -xzvf centlinux.tar
+tar -xvf centlinux.tar
 sudo mv /root/cent/centd /root/cent/cent-cli /root/cent/cent-tx /usr/local/bin
 sudo chmod 755 -R  /usr/local/bin/cent*
 sudo mkdir /home/cent1/.cent
