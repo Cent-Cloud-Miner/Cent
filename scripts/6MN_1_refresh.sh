@@ -54,37 +54,37 @@ echo "addnode=182.206.23.95" >> /home/cent6/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent6/.cent/cent.conf
 
 echo "Syncing first node, please wait...";
-northernd -datadir=/home/cent/.cent -daemon
+centd -datadir=/home/cent1/.cent -daemon
 until cent-cli -datadir=/home/cent/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"First node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing second node, please wait...";
-northernd -datadir=/home/cent2/.cent -daemon
+centd -datadir=/home/cent2/.cent -daemon
 until cent-cli -datadir=/home/cent2/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Second node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing third node, please wait...";
-northernd -datadir=/home/cent3/.cent -daemon
+centd -datadir=/home/cent3/.cent -daemon
 until cent-cli -datadir=/home/cent3/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Third node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing fourth node, please wait...";
-northernd -datadir=/home/cent4/.cent -daemon
+centd -datadir=/home/cent4/.cent -daemon
 until cent-cli -datadir=/home/cent4/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Fourth node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing fourth node, please wait...";
-northernd -datadir=/home/cent5/.cent -daemon
+centd -datadir=/home/cent5/.cent -daemon
 until cent-cli -datadir=/home/cent5/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"5th node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Syncing fourth node, please wait...";
-northernd -datadir=/home/cent6/.cent -daemon
+centd -datadir=/home/cent6/.cent -daemon
 until cent-cli -datadir=/home/cent6/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"6th node is fully synced. Your masternode is running!"${NC}
 sleep 5
 echo "Deleting temporary files"
-rm -rf /root/northern_4masternodes_update.sh
+rm -rf /root/cent_4masternodes_update.sh
 cd ~
 echo "Cents address: CVW3GfX1ertGAfcaPvUQdDgKC7PZYX7c5U"
 echo "LTC address: ltc1q0u3z5u5z9425sksl2vtsh4krvn3f2ejst9x6rj"
