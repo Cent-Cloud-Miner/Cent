@@ -4,9 +4,12 @@ cd ~
 cd /usr/local/bin
 ./cent-cli stop
 rm -rf centd cent-cli cent-tx
-wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
-tar -xzf centlinux.tar
-rm -rf https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
+sudo mkdir /root/cent
+cd /root/cent
+wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
+tar -xvf centlinux.tar -C /root/cent
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin/cent
+sudo chmod 755 -R  /usr/local/bin/cent*
 ./centd -daemon
 sleep 30
 ./cent-cli getinfo
