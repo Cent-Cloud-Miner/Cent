@@ -6,12 +6,6 @@ YELLOW='\033[0;93m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-#Checking OS
-if [[ $(lsb_release -d) != *18.04* ]]; then
-  echo -e ${RED}"The operating system is not Ubuntu 18.04. You must be running on ubuntu 18.04."${NC}
-  exit 1
-fi
-
 echo -e ${YELLOW}"Welcome to the Cent Automated Install, Durring this Process Please Hit Enter or Input What is Asked."${NC}
 echo
 echo -e ${YELLOW}"You Will See alot of code flashing across your screen, don't be alarmed it's supposed to do that. This process can take up to an hour and may appear to be stuck, but I can promise you it's not."${NC}
@@ -66,10 +60,11 @@ sudo echo ' /var/swap.img none swap sw 0 0 ' >> /etc/fstab
 cd ~ 
 sudo mkdir /root/cent
 cd /root/cent
-wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
-tar -xvf centlinux.tar
-sudo mv /root/cent/centd /root/cent/cent-cli /root/cent/cent-tx /usr/local/bin
+wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
+tar -xvf centlinux.tar -C /root/cent
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin/cent
 sudo chmod 755 -R  /usr/local/bin/cent*
+rm -rf centlinux.tar
 sudo mkdir /home/cent1/.cent
 sudo touch /home/cent1/.cent/cent.conf
 echo -e "${GREEN}Configuring Wallet for first node${NC}"
