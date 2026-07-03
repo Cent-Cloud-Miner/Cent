@@ -67,7 +67,7 @@ sudo touch /root/cent/home/cent1/.cent/cent.conf
 echo -e "${GREEN}Configuring Wallet for first node${NC}"
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent1/.cent/cent.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent1/.cent/cent.conf
-echo "rpcallowip=127.0.0.1" >> /home/cent1/.cent/cent.conf
+echo "rpcallowip=127.0.0.1" >> /root/cent/home/cent1/.cent/cent.conf
 echo "server=1" >> /root/cent/home/cent1/.cent/cent.conf
 echo "daemon=1" >> /root/cent/home/cent1/.cent/cent.conf
 echo "maxconnections=250" >> /root/cent/home/cent1/.cent/cent.conf
@@ -141,27 +141,27 @@ echo "addnode=163.245.218.219" >> /root/cent/home/cent4/.cent/cent.conf
 sleep 5 
 fi
 echo "Syncing first node, please wait...";
-/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent1/.cent -daemon
+/root/cent/centd -datadir=/root/cent/home/cent1/.cent -daemon
 sleep 10 
-until /root/cent/home/taihei/Cent/src/cent-cli -datadir=/root/cent/home/cent1/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/cent-cli -datadir=/root/cent/home/cent1/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"First node is fully synced. You 1st masternode is running!"${NC}
 sleep 10
 echo "Syncing second node, please wait...";
-/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent2/.cent -daemon
+/root/cent/centd -datadir=/root/cent/home/cent2/.cent -daemon
 sleep 10 
-until cent-cli -datadir=/root/cent//home/cent2/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/cent-cli -datadir=/root/cent//home/cent2/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Second node is fully synced. You second masternode is running!"${NC}
 sleep 10
 echo "Syncing third node, please wait...";
-/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent3/.cent -daemon
+/root/cent/centd -datadir=/root/cent/home/cent3/.cent -daemon
 sleep 10 
-until /root/cent/home/taihei/Cent/src/cent-cli -datadir=/root/cent/home/cent3/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/cent-cli -datadir=/root/cent/home/cent3/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Third node is fully synced. You third masternode is running!"${NC}
 sleep 10
 echo "Syncing fourth node, please wait...";
-/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent4/.cent -daemon
+/root/cent/centd -datadir=/root/cent/home/cent4/.cent -daemon
 sleep 10 
-until /root/cent/home/taihei/Cent/src/cent-cli -datadir=/root/cent/home/cent4/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/cent-cli -datadir=/root/cent/home/cent4/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Fourth node is fully synced. You fourth masternode is running!"${NC}
 sleep 10 
 echo ""
