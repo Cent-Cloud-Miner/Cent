@@ -24,10 +24,10 @@ read privkey3
 echo -e ${GREEN}"Please Enter Your Masternodes Private Key for 4th node:"${NC}
 read privkey4
 echo "Creating 4 Cent system users with no-login access:"
-sudo adduser --system --home /home/cent cent1
-sudo adduser --system --home /home/cent2 cent2
-sudo adduser --system --home /home/cent3 cent3
-sudo adduser --system --home /home/cent4 cent4
+sudo adduser --system --root /cent/home/cent1 cent1
+sudo adduser --system --root /cent/home/cent2 cent2
+sudo adduser --system --root /cent/home/cent3 cent3
+sudo adduser --system --root /cent/home/cent4 cent4
 
 sudo apt-get -y update 
 sudo apt-get -y upgrade
