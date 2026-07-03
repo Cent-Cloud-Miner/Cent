@@ -43,18 +43,41 @@ sed -i '/addnode/d' /home/cent6/.cent/cent.conf
 
 
 echo "Adding new nodes..."
-echo "addnode=182.206.23.95" >> /home/cent1/.cent/cent.conf
+echo "addnode=185.206.23.95" >> /home/cent1/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent1/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent2/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent1/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent1/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent1/.cent/cent.conf
+
+echo "addnode=185.206.23.95" >> /home/cent2/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent2/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent3/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent2/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent2/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent2/.cent/cent.conf
+
+echo "addnode=185.206.23.95" >> /home/cent3/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent3/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent4/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent3/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent3/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent3/.cent/cent.conf
+
+echo "addnode=185.206.23.95" >> /home/cent4/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent4/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent5/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent4/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent4/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent4/.cent/cent.conf
+
+echo "addnode=185.206.23.95" >> /home/cent5/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent5/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent6/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent5/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent5/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent5/.cent/cent.conf
+
+echo "addnode=185.206.23.95" >> /home/cent6/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent6/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent6/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent6/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent6/.cent/cent.conf
 
 echo "Syncing first node, please wait...";
 centd -datadir=/home/cent1/.cent -daemon
