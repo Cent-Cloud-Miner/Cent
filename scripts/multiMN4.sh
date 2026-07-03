@@ -54,7 +54,7 @@ sudo mkswap /var/swap.img
 sudo swapon /var/swap.img 
 sudo echo ' /var/swap.img none swap sw 0 0 ' >> /etc/fstab
 cd ~ 
-sudo mkdir /root/cent/home/taihei/Cent/src/
+sudo mkdir -p /root/cent/home/taihei/Cent/src/
 cd /root/cent
 wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
 tar -xvf centlinux.tar -C /root/cent
