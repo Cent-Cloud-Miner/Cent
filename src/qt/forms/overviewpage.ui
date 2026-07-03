@@ -875,7 +875,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;Coming Soon &quot;&gt;Coming Soon &lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://69.10.50.56/&quot;&gt;https://69.10.50.56/&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
