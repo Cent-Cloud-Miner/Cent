@@ -4,7 +4,7 @@
 There are many ways to setup a wallet to support start-many. This guide will walk through two of them.
 
 1. [Importing an existing wallet (recommended if you are consolidating wallets).](#option1)
-2. [Sending 2,500 Cent to new wallet addresses.](#option2)
+2. [Sending 200 Cent to new wallet addresses.](#option2)
 
 ## <a name="option1"></a>Option 1. Importing an existing wallet
 
@@ -48,7 +48,7 @@ The wallet will re-scan and you will see your available balance increase by the 
 2. Click the Receive tab.
 3. Fill in the form to request a payment.
     * Label: mn01
-    * Amount: 2500 (optional)
+    * Amount: 200 (optional)
     * Click *Request payment*
 5. Click the *Copy Address* button
 
