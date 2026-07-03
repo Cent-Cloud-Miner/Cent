@@ -6,7 +6,7 @@ YELLOW='\033[0;93m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-echo -e ${YELLOW}"Welcome to the Cent Automated Update 1.0.0 (6in1)."${NC}
+echo -e ${YELLOW}"Welcome to the Cent Automated Update 1.0.0.1 (6in1)."${NC}
 echo "Please wait while updates are performed..."
 sleep 5
 echo "Stopping first node, please wait...";
