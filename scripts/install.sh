@@ -232,7 +232,7 @@ cd /root/cent
 wget $TARBALLURL
 tar -xvf $TARBALLNAME -C /root/cent
 rm $TARBALLNAME
-sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin/cent
 sudo chmod 755 -R  /usr/local/bin/cent*
 rm -rf $TARBALLNAME
 
