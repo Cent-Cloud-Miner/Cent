@@ -6,7 +6,7 @@ YELLOW='\033[0;93m'
 RED='\033[0;31m'
 NC='\033[0m'
 
-echo -e ${YELLOW}"Welcome to the Cent Automated Update 1.0.0 (4in1)."${NC}
+echo -e ${YELLOW}"Welcome to the Cent Automated Update 1.0.0.1(4in1)."${NC}
 echo "Please wait while updates are performed..."
 sleep 5
 echo "Stopping first node, please wait...";
@@ -22,10 +22,13 @@ echo "Removing binaries..."
 cd /usr/local/bin
 rm -rf centd cent-cli cent-tx
 echo "Downloading latest binaries"
+sudo mkdir /root/cent
+cd /root/cent
 wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
-tar -xzf centlinux.tar
+tar -xvf centlinux.tar -C /root/cent
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin/cent
 sudo chmod 755 -R  /usr/local/bin/cent*
-rm -rf cent-cli.tar.gz
+rm -rf centlinux.tar
 echo "Deleting old nodes from node config files"
 sed -i '/addnode/d' /home/cent1/.cent/cent.conf
 sed -i '/addnode/d' /home/cent2/.cent/cent.conf
@@ -33,20 +36,32 @@ sed -i '/addnode/d' /home/cent3/.cent/cent.conf
 sed -i '/addnode/d' /home/cent4/.cent/cent.conf
 
 echo "Adding new nodes..."
-echo "addnode=182.206.23.95" >> /home/cent1/.cent/cent.conf
+echo "addnode=185.206.23.95" >> /home/cent1/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent1/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent1/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent1/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent1/.cent/cent.conf
 echo "staking=1" >> /home/cent1/.cent/cent.conf
 
-echo "addnode=182.206.23.95" >> /home/cent2/.cent/cent.conf
+echo "addnode=185.206.23.95" >> /home/cent2/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent2/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent2/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent2/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent2/.cent/cent.conf
 echo "staking=1" >> /home/cent2/.cent/cent.conf
 
-echo "addnode=182.206.23.95" >> /home/cent3/.cent/cent.conf
+echo "addnode=185.206.23.95" >> /home/cent3/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent3/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent3/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent3/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent3/.cent/cent.conf
 echo "staking=1" >> /home/cent3/.cent/cent.conf
 
-echo "addnode=182.206.23.95" >> /home/cent4/.cent/cent.conf
+echo "addnode=185.206.23.95" >> /home/cent4/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent4/.cent/cent.conf
+echo "addnode=185.190.56.235" >> /home/cent4/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent4/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /home/cent4/.cent/cent.conf
 echo "staking=1" >> /home/cent4/.cent/cent.conf
 
 echo "Syncing first node, please wait...";
