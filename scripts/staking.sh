@@ -59,7 +59,7 @@ echo "addnode=182.206.23.95" >> /home/cent/.cent/cent.conf
 echo "addnode=69.10.50.56" >> /home/cent/.cent/cent.conf
 echo "addnode=162.35.173.254" >> /home/cent/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent/.cent/cent.conf
-echo "port=6942" >> /home/cent/.cent/cent.conf
+echo "port=9822" >> /home/cent/.cent/cent.conf
 mv cent.conf .cent
 
 
