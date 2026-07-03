@@ -22,10 +22,13 @@ echo "Removing binaries..."
 cd /usr/local/bin
 rm -rf centd cent-cli cent-tx
 echo "Downloading latest binaries"
-wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
-tar -xzf centlinux.tar
+sudo mkdir /root/cent
+cd /root/cent
+wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
+tar -xvf centlinux.tar -C /root/cent
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin/cent
 sudo chmod 755 -R  /usr/local/bin/cent*
-rm -rf cent-cli.tar.gz
+rm -rf centlinux.tar
 echo "Deleting old nodes from node config files"
 sed -i '/addnode/d' /home/cent1/.cent/cent.conf
 sed -i '/addnode/d' /home/cent2/.cent/cent.conf
