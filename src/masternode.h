@@ -14,15 +14,29 @@
 #include "timedata.h"
 #include "util.h"
 
-#define MASTERNODE_MIN_CONFIRMATIONS 25
-#define MASTERNODE_MIN_MNP_SECONDS (10 * 60)
-#define MASTERNODE_MIN_MNB_SECONDS (5 * 60)
-#define MASTERNODE_PING_SECONDS (5 * 60)
+
+#define MASTERNODE_MIN_CONFIRMATIONS 3
+
+// Wait one block between broadcasts
+#define MASTERNODE_MIN_MNB_SECONDS    (15 * 60)
+
+// Wait two blocks before another ping
+#define MASTERNODE_MIN_MNP_SECONDS    (30 * 60)
+
+// Ping every block
+#define MASTERNODE_PING_SECONDS       (15 * 60)
+
+// Expire after 8 missed pings (~2 hours)
 #define MASTERNODE_EXPIRATION_SECONDS (120 * 60)
-#define MASTERNODE_REMOVAL_SECONDS (130 * 60)
-#define MASTERNODE_CHECK_SECONDS 5
+
+// Remove after about 9 missed pings (~2h15m)
+#define MASTERNODE_REMOVAL_SECONDS    (135 * 60)
+
+// Internal check interval
+#define MASTERNODE_CHECK_SECONDS      30
 
 #define MASTERNODE_COLLATERAL 200
+
 
 using namespace std;
 
