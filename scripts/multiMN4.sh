@@ -24,10 +24,10 @@ read privkey3
 echo -e ${GREEN}"Please Enter Your Masternodes Private Key for 4th node:"${NC}
 read privkey4
 echo "Creating 4 Cent system users with no-login access:"
-sudo adduser --system --root /cent/home/cent1 cent1
-sudo adduser --system --root /cent/home/cent2 cent2
-sudo adduser --system --root /cent/home/cent3 cent3
-sudo adduser --system --root /cent/home/cent4 cent4
+sudo adduser --system --home /root/cent/home/cent1 cent1
+sudo adduser --system --home /root/cent/home/cent2 cent2
+sudo adduser --system --home /root/cent/home/cent3 cent3
+sudo adduser --system --home /root/cent/home/cent4 cent4
 
 sudo apt-get -y update 
 sudo apt-get -y upgrade
@@ -58,10 +58,11 @@ sudo mkdir /root/cent/home/taihei/Cent/src/
 cd /root/cent
 wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
 tar -xvf centlinux.tar -C /root/cent
-sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /root/cent/home/taihei/Cent/src/
-sudo chmod 755 -R  /root/cent/home/taihei/Cent/src/*
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /root/cent
+
+sudo chmod 755 -R  /root/cent*
 rm -rf centlinux.tar
-sudo mkdir /root/cent/home/cent1/.cent
+sudo mkdir -p /root/cent/home/cent1/.cent
 sudo touch /root/cent/home/cent1/.cent/cent.conf
 echo -e "${GREEN}Configuring Wallet for first node${NC}"
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent1/.cent/cent.conf
@@ -81,7 +82,7 @@ echo "addnode=162.35.173.254" >> /root/cent/home/cent1/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /root/cent/home/cent1/.cent/cent.conf
 sleep 5
 echo -e "${GREEN}Configuring Wallet for second node${NC}"
-sudo mkdir /root/cent/home/cent2/.cent
+sudo mkdir -p /root/cent/home/cent2/.cent
 sudo touch /root/cent/home/cent2/.cent/cent.conf
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent2/.cent/cent.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent2/.cent/cent.conf
@@ -100,7 +101,7 @@ echo "addnode=162.35.173.254" >> /root/cent/home/cent2/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /root/cent/home/cent2/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for third node${NC}"
-sudo mkdir /root/cent/home/cent3/.cent
+sudo mkdir -p /root/cent/home/cent3/.cent
 sudo touch /root/cent/home/cent3/.cent/cent.conf
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent3/.cent/cent.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent3/.cent/cent.conf
@@ -119,7 +120,7 @@ echo "addnode=162.35.173.254" >> /root/cent/home/cent3/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /root/cent/home/cent3/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for 4th node${NC}"
-sudo mkdir /root/cent/home/cent4/.cent
+sudo mkdir -p /root/cent/home/cent4/.cent
 sudo touch /root/cent/home/cent4/.cent/cent.conf
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent4/.cent/cent.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent4/.cent/cent.conf
