@@ -875,7 +875,7 @@
                         </font>
                        </property>
                        <property name="text">
-                        <string notr="true">&lt;a href=&quot;hhttp://69.10.50.56:3001/&quot;&gt;http://69.10.50.56:3001/&lt;/a&gt;</string>
+                        <string notr="true">&lt;a href=&quot;https://explorer.centcloud.space/&quot;&gt;https://explorer.centcloud.space/&lt;/a&gt;</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
