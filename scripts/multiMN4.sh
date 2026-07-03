@@ -54,113 +54,113 @@ sudo mkswap /var/swap.img
 sudo swapon /var/swap.img 
 sudo echo ' /var/swap.img none swap sw 0 0 ' >> /etc/fstab
 cd ~ 
-sudo mkdir /root/cent
+sudo mkdir /root/cent/home/taihei/Cent/src/
 cd /root/cent
 wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
 tar -xvf centlinux.tar -C /root/cent
-sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /root/cent
-sudo chmod 755 -R  /root/cent*
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /root/cent/home/taihei/Cent/src/
+sudo chmod 755 -R  /root/cent/home/taihei/Cent/src/*
 rm -rf centlinux.tar
-sudo mkdir /home/cent1/.cent
-sudo touch /home/cent1/.cent/cent.conf
+sudo mkdir /root/cent/home/cent1/.cent
+sudo touch /root/cent/home/cent1/.cent/cent.conf
 echo -e "${GREEN}Configuring Wallet for first node${NC}"
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /home/cent1/.cent/cent.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /home/cent1/.cent/cent.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent1/.cent/cent.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent1/.cent/cent.conf
 echo "rpcallowip=127.0.0.1" >> /home/cent1/.cent/cent.conf
-echo "server=1" >> /home/cent1/.cent/cent.conf
-echo "daemon=1" >> /home/cent1/.cent/cent.conf
-echo "maxconnections=250" >> /home/cen1t/.cent/cent.conf
-echo "masternode=1" >> /home/cent1/.cent/cent.conf
-echo "rpcport=9922" >> /home/cent1/.cent/cent.conf
-echo "listen=0" >> /home/cent1/.cent/cent.conf
-echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent1/.cent/cent.conf
-echo "masternodeprivkey=$privkey" >> /home/cent1/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent1/.cent/cent.conf
-echo "addnode=69.10.50.56" >> /home/cent1/.cent/cent.conf
-echo "addnode=162.35.173.254" >> /home/cent1/.cent/cent.conf
-echo "addnode=163.245.218.219" >> /home/cent1/.cent/cent.conf
+echo "server=1" >> /root/cent/home/cent1/.cent/cent.conf
+echo "daemon=1" >> /root/cent/home/cent1/.cent/cent.conf
+echo "maxconnections=250" >> /root/cent/home/cent1/.cent/cent.conf
+echo "masternode=1" >> /root/cent/home/cent1/.cent/cent.conf
+echo "rpcport=9922" >> /root/cent/home/cent1/.cent/cent.conf
+echo "listen=0" >> /root/cent/home/cent1/.cent/cent.conf
+echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /root/cent/home/cent1/.cent/cent.conf
+echo "masternodeprivkey=$privkey" >> /root/cent/home/cent1/.cent/cent.conf
+echo "addnode=182.206.23.95" >> /root/cent/home/cent1/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /root/cent/home/cent1/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /root/cent/home/cent1/.cent/cent.conf
+echo "addnode=163.245.218.219" >> /root/cent/home/cent1/.cent/cent.conf
 sleep 5
 echo -e "${GREEN}Configuring Wallet for second node${NC}"
-sudo mkdir /home/cent2/.cent
-sudo touch /home/cent2/.cent/cent.conf
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /home/cent2/.cent/cent.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /home/cent2/.cent/cent.conf
+sudo mkdir /root/cent/home/cent2/.cent
+sudo touch /root/cent/home/cent2/.cent/cent.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent2/.cent/cent.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent2/.cent/cent.conf
 echo "rpcallowip=127.0.0.1" >> /home/cent2/.cent/cent.conf
-echo "server=1" >> /home/cent2/.cent/cent.conf
-echo "daemon=1" >> /home/cent2/.cent/cent.conf
-echo "maxconnections=250" >> /home/cent2/.cent/cent.conf
-echo "masternode=1" >> /home/cent2/.cent/cent.conf
-echo "rpcport=9923" >> /home/cent2/.cent/cent.conf
-echo "listen=0" >> /home/cent2/.cent/cent.conf
-echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent2/.cent/cent.conf
-echo "masternodeprivkey=$privkey2" >> /home/cent2/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent2/.cent/cent.conf
-echo "addnode=69.10.50.56" >> /home/cent2/.cent/cent.conf
-echo "addnode=162.35.173.254" >> /home/cent2/.cent/cent.conf
-echo "addnode=163.245.218.219" >> /home/cent2/.cent/cent.conf
+echo "server=1" >> /root/cent/home/cent2/.cent/cent.conf
+echo "daemon=1" >> /root/cent/home/cent2/.cent/cent.conf
+echo "maxconnections=250" >> /root/cent/home/cent2/.cent/cent.conf
+echo "masternode=1" >> /root/cent/home/cent2/.cent/cent.conf
+echo "rpcport=9923" >> /root/cent/home/cent2/.cent/cent.conf
+echo "listen=0" >> /root/cent/home/cent2/.cent/cent.conf
+echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /root/cent/home/cent2/.cent/cent.conf
+echo "masternodeprivkey=$privkey2" >> /root/cent/home/cent2/.cent/cent.conf
+echo "addnode=182.206.23.95" >> /root/cent/home/cent2/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /root/cent/home/cent2/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /root/cent/home/cent2/.cent/cent.conf
+echo "addnode=163.245.218.219" >> /root/cent/home/cent2/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for third node${NC}"
-sudo mkdir /home/cent3/.cent
-sudo touch /home/cent3/.cent/cent.conf
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /home/cent3/.cent/cent.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /home/cent3/.cent/cent.conf
-echo "rpcallowip=127.0.0.1" >> /home/cent3/.cent/cent.conf
-echo "server=1" >> /home/cent3/.cent/cent.conf
-echo "daemon=1" >> /home/cent3/.cent/cent.conf
-echo "maxconnections=250" >> /home/cent3/.cent/cent.conf
-echo "masternode=1" >> /home/cent3/.cent/cent.conf
-echo "rpcport=9924" >> /home/cent3/.cent/cent.conf
-echo "listen=0" >> /home/cent3/.cent/cent.conf
-echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent3/.cent/cent.conf
-echo "masternodeprivkey=$privkey3" >> /home/cent3/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent3/.cent/cent.conf
-echo "addnode=69.10.50.56" >> /home/cent3/.cent/cent.conf
-echo "addnode=162.35.173.254" >> /home/cent3/.cent/cent.conf
-echo "addnode=163.245.218.219" >> /home/cent3/.cent/cent.conf
+sudo mkdir /root/cent/home/cent3/.cent
+sudo touch /root/cent/home/cent3/.cent/cent.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent3/.cent/cent.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent3/.cent/cent.conf
+echo "rpcallowip=127.0.0.1" >> /root/cent/home/cent3/.cent/cent.conf
+echo "server=1" >> /root/cent/home/cent3/.cent/cent.conf
+echo "daemon=1" >> /root/cent/home/cent3/.cent/cent.conf
+echo "maxconnections=250" >> /root/cent/home/cent3/.cent/cent.conf
+echo "masternode=1" >> /root/cent/home/cent3/.cent/cent.conf
+echo "rpcport=9924" >> /root/cent/home/cent3/.cent/cent.conf
+echo "listen=0" >> /root/cent/home/cent3/.cent/cent.conf
+echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /root/cent/home/cent3/.cent/cent.conf
+echo "masternodeprivkey=$privkey3" >> /root/cent/home/cent3/.cent/cent.conf
+echo "addnode=182.206.23.95" >> /root/cent/home/cent3/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /root/cent/home/cent3/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /root/cent/home/cent3/.cent/cent.conf
+echo "addnode=163.245.218.219" >> /root/cent/home/cent3/.cent/cent.conf
 sleep 5 
 echo -e "${GREEN}Configuring Wallet for 4th node${NC}"
-sudo mkdir /home/cent4/.cent
-sudo touch /home/cent4/.cent/cent.conf
-echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /home/cent4/.cent/cent.conf
-echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /home/cent4/.cent/cent.conf
-echo "rpcallowip=127.0.0.1" >> /home/cent4/.cent/cent.conf
-echo "server=1" >> /home/cent4/.cent/cent.conf
-echo "daemon=1" >> /home/cent4/.cent/cent.conf
-echo "maxconnections=250" >> /home/cent4/.cent/cent.conf
-echo "masternode=1" >> /home/cent4/.cent/cent.conf
-echo "rpcport=9925" >> /home/cent4/.cent/cent.conf
-echo "listen=0" >> /home/cent4/.cent/cent.conf
-echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent4/.cent/cent.conf
-echo "masternodeprivkey=$privkey4" >> /home/cent4/.cent/cent.conf
-echo "addnode=182.206.23.95" >> /home/cent4/.cent/cent.conf
-echo "addnode=69.10.50.56" >> /home/cent4/.cent/cent.conf
-echo "addnode=162.35.173.254" >> /home/cent4/.cent/cent.conf
-echo "addnode=163.245.218.219" >> /home/cent4/.cent/cent.conf
+sudo mkdir /root/cent/home/cent4/.cent
+sudo touch /root/cent/home/cent4/.cent/cent.conf
+echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent4/.cent/cent.conf
+echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/cent/home/cent4/.cent/cent.conf
+echo "rpcallowip=127.0.0.1" >> /root/cent/home/cent4/.cent/cent.conf
+echo "server=1" >> /root/cent/home/cent4/.cent/cent.conf
+echo "daemon=1" >> /root/cent/home/cent4/.cent/cent.conf
+echo "maxconnections=250" >> /root/cent/home/cent4/.cent/cent.conf
+echo "masternode=1" >> /root/cent/home/cent4/.cent/cent.conf
+echo "rpcport=9925" >> /root/cent/home/cent4/.cent/cent.conf
+echo "listen=0" >> /root/cent/home/cent4/.cent/cent.conf
+echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /root/cent/home/cent4/.cent/cent.conf
+echo "masternodeprivkey=$privkey4" >> /root/cent/home/cent4/.cent/cent.conf
+echo "addnode=182.206.23.95" >> /root/cent/home/cent4/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /root/cent/home/cent4/.cent/cent.conf
+echo "addnode=162.35.173.254" >> /root/cent/home/cent4/.cent/cent.conf
+echo "addnode=163.245.218.219" >> /root/cent/home/cent4/.cent/cent.conf
 
 sleep 5 
 fi
 echo "Syncing first node, please wait...";
-centd -datadir=/home/cent1/.cent -daemon
+/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent1/.cent -daemon
 sleep 10 
-until cent-cli -datadir=/home/cent1/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/home/taihei/Cent/src/cent-cli -datadir=/root/cent/home/cent1/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"First node is fully synced. You 1st masternode is running!"${NC}
 sleep 10
 echo "Syncing second node, please wait...";
-centd -datadir=/home/cent2/.cent -daemon
+/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent2/.cent -daemon
 sleep 10 
-until cent-cli -datadir=/home/cent2/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until cent-cli -datadir=/root/cent//home/cent2/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Second node is fully synced. You second masternode is running!"${NC}
 sleep 10
 echo "Syncing third node, please wait...";
-centd -datadir=/home/cent3/.cent -daemon
+/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent3/.cent -daemon
 sleep 10 
-until cent-cli -datadir=/home/cent3/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/home/taihei/Cent/src/cent-cli -datadir=/root/cent/home/cent3/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Third node is fully synced. You third masternode is running!"${NC}
 sleep 10
 echo "Syncing fourth node, please wait...";
-centd -datadir=/home/cent4/.cent -daemon
+/root/cent/home/taihei/Cent/src/centd -datadir=/root/cent/home/cent4/.cent -daemon
 sleep 10 
-until cent-cli -datadir=/home/cent4/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/home/taihei/Cent/src/cent-cli -datadir=/root/cent/home/cent4/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Fourth node is fully synced. You fourth masternode is running!"${NC}
 sleep 10 
 echo ""
