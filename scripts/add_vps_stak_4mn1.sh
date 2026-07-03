@@ -22,7 +22,7 @@ echo "Removing binaries..."
 cd /usr/local/bin
 rm -rf centd cent-cli cent-tx
 echo "Downloading latest binaries"
-wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
+wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
 tar -xzf centlinux.tar
 sudo chmod 755 -R  /usr/local/bin/cent*
 rm -rf cent-cli.tar.gz

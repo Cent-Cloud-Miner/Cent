@@ -51,9 +51,9 @@ sudo echo ' /var/swap.img none swap sw 0 0 ' >> /etc/fstab
 cd ~ 
 sudo mkdir /root/cent
 cd /root/cent
-wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
-tar -xvf centlinux.tar
-sudo mv /root/cent/centd /root/cent/cent-cli /root/cent/cent-tx /usr/local/bin
+wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
+tar -xvf centlinux.tar -C /root/cent
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin/cent
 sudo chmod 755 -R  /usr/local/bin/cent*
 sudo mkdir /home/cent1/.cent
 sudo touch /home/cent1/.cent/cent.conf
@@ -70,7 +70,7 @@ echo "listen=0" >> /home/cent1/.cent/cent.conf
 echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent1/.cent/cent.conf
 echo "masternodeprivkey=$privkey" >> /home/cent1/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent1/.cent/cent.conf
-echo "addnode=153.75.231.58" >> /home/cent1/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent1/.cent/cent.conf
 echo "addnode=162.35.173.254" >> /home/cent1/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent1/.cent/cent.conf
 sleep 5
@@ -86,10 +86,10 @@ echo "maxconnections=250" >> /home/cent2/.cent/cent.conf
 echo "masternode=1" >> /home/cent2/.cent/cent.conf
 echo "rpcport=9923" >> /home/cent2/.cent/cent.conf
 echo "listen=0" >> /home/cent2/.cent/cent.conf
-echo "externalip=$(hostname  -I | cut -f1 -d' '):9922" >> /home/cent2/.cent/cent.conf
+echo "externalip=$(hostname  -I | cut -f1 -d' '):9923" >> /home/cent2/.cent/cent.conf
 echo "masternodeprivkey=$privkey2" >> /home/cent2/.cent/cent.conf
 echo "addnode=182.206.23.95" >> /home/cent2/.cent/cent.conf
-echo "addnode=153.75.231.58" >> /home/cent2/.cent/cent.conf
+echo "addnode=69.10.50.56" >> /home/cent2/.cent/cent.conf
 echo "addnode=162.35.173.254" >> /home/cent2/.cent/cent.conf
 echo "addnode=163.245.218.219" >> /home/cent2/.cent/cent.conf
 sleep 5 

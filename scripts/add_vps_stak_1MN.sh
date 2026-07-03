@@ -2,7 +2,7 @@ cd ~
 cd /usr/local/bin
 ./cent-cli stop
 rm -rf centd cent-cli cent-tx
-wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0/centlinux.tar
+wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar
 tar -xzf centlinux.tar
 rm -rf centlinux.tar
 echo "staking=1" >> /home/cent/.cent/cent.conf
