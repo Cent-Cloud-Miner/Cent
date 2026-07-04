@@ -62,6 +62,16 @@ sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/ce
 
 sudo chmod 755 -R  /root/cent*
 rm -rf centlinux.tar
+
+sudo apt-get install -y ufw
+sudo ufw allow ssh/tcp
+sudo ufw limit ssh/tcp
+sudo ufw logging on
+echo "y" | sudo ufw enable
+sudo ufw status
+sudo ufw allow 9822/tcp
+sudo ufw allow 9922/tcp
+
 sudo mkdir -p /root/cent/home/cent1/.cent
 sudo touch /root/cent/home/cent1/.cent/cent.conf
 echo -e "${GREEN}Configuring Wallet for first node${NC}"

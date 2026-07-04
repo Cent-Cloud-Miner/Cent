@@ -228,13 +228,14 @@ if [[ ("$UFW" == "y" || "$UFW" == "Y" || "$UFW" == "") ]]; then
 fi
 
 # Install CENT daemon
-sudo mkdir /root/cent
+sudo mkdir -p /root/cent
+sudo chmod 755 -R  /root/cent*
 cd /root/cent
 wget $TARBALLURL
 tar -xvf $TARBALLNAME -C /root/cent
 rm $TARBALLNAME
-sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /usr/local/bin/cent
-sudo chmod 755 -R  /usr/local/bin/cent*
+sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /root/cent
+sudo chmod 755 -R  /root/cent*
 rm -rf $TARBALLNAME
 
 # Create .northern directory
@@ -246,8 +247,8 @@ if [[ ("$BOOTSTRAP" == "y" || "$BOOTSTRAP" == "Y" || "$BOOTSTRAP" == "") ]]; the
 fi
 
 # Create cent.conf
-touch $USERHOME/.cent/cent.conf
-cat > $USERHOME/.cent/cent.conf << EOL
+touch $USERHOME/.cent1/cent.conf
+cat > $USERHOME/.cent1/cent.conf << EOL
 ${INSTALLERUSED}
 rpcuser=${RPCUSER}
 rpcpassword=${RPCPASSWORD}
@@ -282,8 +283,8 @@ After=network.target
 Type=forking
 User=${USER}
 WorkingDirectory=${USERHOME}
-ExecStart=/usr/local/bin/centd -conf=${USERHOME}/.cent/cent.conf -datadir=${USERHOME}/.cent
-ExecStop=/usr/local/bin/cent-cli -conf=${USERHOME}/.cent/cent.conf -datadir=${USERHOME}/.cent stop
+ExecStart=/root/cent/centd -conf=${USERHOME}/.cent/cent.conf -datadir=${USERHOME}/.cent
+ExecStop=/root/cent/cent-cli -conf=${USERHOME}/.cent/cent.conf -datadir=${USERHOME}/.cent stop
 Restart=on-abort
 [Install]
 WantedBy=multi-user.target
