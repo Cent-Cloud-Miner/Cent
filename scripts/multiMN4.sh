@@ -159,7 +159,7 @@ sleep 10
 echo "Syncing second node, please wait...";
 /root/cent/centd -datadir=/root/cent/home/cent2/.cent -daemon
 sleep 10 
-until /root/cent/cent-cli -datadir=/root/cent//home/cent2/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
+until /root/cent/cent-cli -datadir=/root/cent/home/cent2/.cent mnsync status | grep -m 1 '"IsBlockchainSynced": true,'; do sleep 1 ; done > /dev/null 2>&1
 echo -e ${GREEN}"Second node is fully synced. You second masternode is running!"${NC}
 sleep 10
 echo "Syncing third node, please wait...";
