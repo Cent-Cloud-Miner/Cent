@@ -65,7 +65,7 @@ rm -rf centlinux.tar
 
 sudo apt-get install -y ufw
 sudo ufw allow ssh/tcp
-sudo ufw limit ssh/tcp
+sudo ufw allow ssh/tcp
 sudo ufw logging on
 echo "y" | sudo ufw enable
 sudo ufw status
