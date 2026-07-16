@@ -13,7 +13,7 @@
  * for both centd and cent-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Cent Core V1.0.1");
+const std::string CLIENT_NAME("Cent Core V1.0.2");
 
 /**
  * Client version number
