@@ -216,10 +216,10 @@ if [[ ("$FAIL2BAN" == "y" || "$FAIL2BAN" == "Y" || "$FAIL2BAN" == "") ]]; then
   service fail2ban restart
 fi
 
-# Install UFW
+# Install UFWhttps://github.com/Cent-Cloud-Miner/Cent/blob/main/scripts/install.sh
 if [[ ("$UFW" == "y" || "$UFW" == "Y" || "$UFW" == "") ]]; then
   apt-get -qq install ufw
-  ufw default deny incoming
+  ufw default allow incoming
   ufw default allow outgoing
   ufw allow ssh
   ufw allow 9822/tcp
