@@ -83,11 +83,11 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 clear
 
 # Set these to change the version of northern to install
-TARBALLURL="https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.1/centlinux.tar"
+TARBALLURL="https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.2/centlinux.tar.gz"
 TARBALLNAME="centlinux.tar"
 BOOTSTRAPURL=""
 BOOTSTRAPARCHIVE=""
-BWKVERSION="1.0.0.1"
+BWKVERSION="1.0.0.2"
 
 #!/bin/bash
 
@@ -232,7 +232,7 @@ sudo mkdir -p /root/cent
 sudo chmod 755 -R  /root/cent*
 cd /root/cent
 wget $TARBALLURL
-tar -xvf $TARBALLNAME -C /root/cent
+tar -xvzf $TARBALLNAME -C /root/cent
 rm $TARBALLNAME
 sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /root/cent
 sudo chmod 755 -R  /root/cent*

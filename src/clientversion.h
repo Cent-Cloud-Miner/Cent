@@ -38,7 +38,7 @@
 #define DO_STRINGIZE(X) #X
 
 //! Copyright string used in Windows .rc files
-#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2014-" STRINGIZE(COPYRIGHT_YEAR) " The Dash Core Developers, 2015-" STRINGIZE(COPYRIGHT_YEAR) " The PIVX Core Developers, 2017-" STRINGIZE(COPYRIGHT_YEAR) " The Cent Core Developers" Cent Dev address: CVW3GfX1ertGAfcaPvUQdDgKC7PZYX7c5U, LTC Dev address: ltc1q0u3z5u5z9425sksl2vtsh4krvn3f2ejst9x6rj 
+#define COPYRIGHT_STR "2009-" STRINGIZE(COPYRIGHT_YEAR) " The Bitcoin Core Developers, 2014-" STRINGIZE(COPYRIGHT_YEAR) " The Dash Core Developers, 2015-" STRINGIZE(COPYRIGHT_YEAR) " The PIVX Core Developers, 2017-" STRINGIZE(COPYRIGHT_YEAR) " The Cent Core Developers. Cent Dev address: CVW3GfX1ertGAfcaPvUQdDgKC7PZYX7c5U, LTC Dev address: ltc1q0u3z5u5z9425sksl2vtsh4krvn3f2ejst9x6rj"
 
 /**
  * centd-res.rc includes this file, but it cannot cope with real c++ code.
@@ -46,8 +46,8 @@
  * Anything other than a define should be guarded below.
  */
 
-#if !defined(WINDRES_PREPROC)
-
+#if !defined(WINDRES_PREPROC) && !defined(RC_INVOKED)
+#ifndef RC_INVOKED
 #include <string>
 #include <vector>
 
@@ -68,3 +68,4 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
 #endif // WINDRES_PREPROC
 
 #endif // BITCOIN_CLIENTVERSION_H
+#endif // CENT_CLIENTVERSION_H
