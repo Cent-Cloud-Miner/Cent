@@ -42,14 +42,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
  
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x000001c49560dd21d7005a529e1da628a920dba19fd2b476f9af5c274357aad1"))
-    (225, uint256("0x04a1506756574adbe182a5a7569df0a8f31403a3c1baabae2b675d07a611d15a"))
-    (1690, uint256("0xdac24142a6ef77d26e13b054ba812d7732b857d163a69a8ff6c255d7dc61cb5d"));
+    (4100, uint256("0x375c1813ae84e8871d5ff9e734ddbd3b8d125bd697662a784125a603bd7d8945"));
+
 
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1782115677, // * UNIX timestamp of last checkpoint block
-    1690,          // * total number of transactions between genesis and last checkpoint
+    4100,          // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2000        // * estimated number of transactions per day after checkpoint
 };
@@ -141,14 +140,14 @@ public:
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
 
-        fMiningRequiresPeers = true;
+        fMiningRequiresPeers = false;
         fAllowMinDifficultyBlocks = false;
         fDefaultConsistencyChecks = true;
-        fRequireStandard = true;
-        fMineBlocksOnDemand = true;
+        fRequireStandard = false;
+        fMineBlocksOnDemand = false;
         fSkipProofOfWorkCheck = true;
         fTestnetToBeDeprecatedFieldRPC = false;
-        fHeadersFirstSyncingActive = true;
+        fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 10;
         strSporkKey = "045f3ca10d4a639c5af5d5db1e84b86a02d0b9a791e8237af326936527b8e254cbf1d9661d7983cd71dec0d2bb044c3bc41d8996d895e556dfac649f2c62cadeca";
