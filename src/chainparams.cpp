@@ -121,6 +121,8 @@ public:
 
         // Note that of those with the service bits flag, most only support a subset of possible options
       vSeeds.emplace_back(CDNSSeedData("163.245.218.219", "163.245.218.219"));
+        vSeeds.emplace_back(CDNSSeedData("69.10.50.56", "69.10.50.56"));
+         vSeeds.emplace_back(CDNSSeedData("185.190.56.235", "185.190.56.235"));
       vSeeds.emplace_back(CDNSSeedData("182.206.23.95", "182.206.23.95"));
       
 
