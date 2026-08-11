@@ -5,7 +5,7 @@ rm -rf centd cent-cli cent-tx
 sudo mkdir /root/cent
 cd /root/cent
 echo -e ${YELLOW}"Welcome to the Cent Automated Update 1.0.2.1.0.0.3(4in1)."${NC}
-echo "Please wait while updates are performed..."
+echo "Please wait while Masternode are be installed..."
 sleep 5
 wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.2.1.0.0.3/centlinux.tar.gz
 tar -xvzf centlinux.tar -C /root/cent
