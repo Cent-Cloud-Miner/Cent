@@ -28,9 +28,13 @@ sudo free
 sudo echo "/var/swap.img none swap sw 0 0" >> /etc/fstab
 cd
 
+echo -e ${YELLOW}"Welcome to the Cent Automated 1.0.2.1.0.0.3 (4in1)."${NC}
+echo "Please wait while updates are performed..."
+sleep 5
+
 sudo mkdir -p /root/cent
 cd /root/cent
-wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.2/centlinux.tar.gz
+wget https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.2.1.0.0.3/centlinux.tar.gz
 tar -xvzf centlinux.tar -C /root/cent
 sudo mv /root/cent/home/taihei/Cent/src/centd /root/cent/home/taihei/Cent/src/cent-cli /root/cent/home/taihei/Cent/src/cent-tx /root/cent
 
