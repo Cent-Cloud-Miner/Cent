@@ -10,6 +10,12 @@ echo -e ${YELLOW}"Welcome to the Cent Automated Install, Durring this Process Pl
 echo
 echo -e ${YELLOW}"You Will See alot of code flashing across your screen, don't be alarmed it's supposed to do that. This process can take up to an hour and may appear to be stuck, but I can promise you it's not."${NC}
 echo
+
+
+echo -e ${YELLOW}"Welcome to the Cent Automated 1.0.2.1.0.0.3 (6in1)."${NC}
+echo "Please wait while Masternode are be installed..."
+sleep 5
+
 echo -e ${GREEN}"Are you sure you want to install a Cent Masternode? type y/n followed by [ENTER]:"${NC}
 read AGREE
 
