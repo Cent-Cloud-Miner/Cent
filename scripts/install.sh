@@ -83,11 +83,11 @@ set -- "${POSITIONAL[@]}" # restore positional parameters
 clear
 
 # Set these to change the version of northern to install
-TARBALLURL="https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.0.2/centlinux.tar.gz"
+TARBALLURL="https://github.com/Cent-Cloud-Miner/Cent/releases/download/1.0.2.1.0.0.3/centlinux.tar.gz"
 TARBALLNAME="centlinux.tar"
 BOOTSTRAPURL=""
 BOOTSTRAPARCHIVE=""
-BWKVERSION="1.0.0.2"
+BWKVERSION="1.0.2.1.0.0.3"
 
 #!/bin/bash
 
