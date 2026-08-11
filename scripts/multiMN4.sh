@@ -7,7 +7,7 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e ${YELLOW}"Welcome to the Cent Automated 1.0.2.1.0.0.3(4in1)."${NC}
-echo "Please wait while updates are performed..."
+echo "Please wait while Masternode are be installed..."
 sleep 5
 
 echo -e ${YELLOW}"Welcome to the Cent Automated Install, Durring this Process Please Hit Enter or Input What is Asked."${NC}
